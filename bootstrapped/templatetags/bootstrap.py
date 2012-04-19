@@ -19,7 +19,7 @@ class BootstrapJSNode(template.Node):
             SCRIPT_TAG % (settings.STATIC_URL, 'button'),
             SCRIPT_TAG % (settings.STATIC_URL, 'dropdown'),
             SCRIPT_TAG % (settings.STATIC_URL, 'modal'),
-            SCRIPT_TAG % (settings.STATIC_URL, 'popover'),
+            #SCRIPT_TAG % (settings.STATIC_URL, 'popover'),
             SCRIPT_TAG % (settings.STATIC_URL, 'scrollspy'),
             SCRIPT_TAG % (settings.STATIC_URL, 'tab'),
             SCRIPT_TAG % (settings.STATIC_URL, 'tooltip'),
