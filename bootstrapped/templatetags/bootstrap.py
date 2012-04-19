@@ -12,14 +12,18 @@ class BootstrapJSNode(template.Node):
 
     def render_all_scripts(self):
         results = [
-            SCRIPT_TAG % (settings.STATIC_URL, 'alerts'),
-            SCRIPT_TAG % (settings.STATIC_URL, 'buttons'),
+            SCRIPT_TAG % (settings.STATIC_URL, 'alert'),
+            SCRIPT_TAG % (settings.STATIC_URL, 'carousel'),
+            SCRIPT_TAG % (settings.STATIC_URL, 'collapse'),
+            SCRIPT_TAG % (settings.STATIC_URL, 'button'),
             SCRIPT_TAG % (settings.STATIC_URL, 'dropdown'),
             SCRIPT_TAG % (settings.STATIC_URL, 'modal'),
             SCRIPT_TAG % (settings.STATIC_URL, 'popover'),
             SCRIPT_TAG % (settings.STATIC_URL, 'scrollspy'),
-            SCRIPT_TAG % (settings.STATIC_URL, 'tabs'),
-            SCRIPT_TAG % (settings.STATIC_URL, 'twipsy'),
+            SCRIPT_TAG % (settings.STATIC_URL, 'tab'),
+            SCRIPT_TAG % (settings.STATIC_URL, 'tooltip'),
+            SCRIPT_TAG % (settings.STATIC_URL, 'transition'),
+            SCRIPT_TAG % (settings.STATIC_URL, 'typeahead'),
         ]
         return '\n'.join(results)
 
@@ -46,7 +50,7 @@ def bootstrap_css():
     if settings.TEMPLATE_DEBUG:
         return '<link rel="stylesheet" type="text/css" href="%sbootstrap.css">' % settings.STATIC_URL
     else:
-        return '<link rel="stylesheet" type="text/css" href="%sbootstrap.min.css">' % settings.STATIC_URL
+        return '<link rel="stylesheet" type="text/css" href="%sbootstrap.css">' % settings.STATIC_URL
 
 @register.simple_tag
 def bootstrap_less():
