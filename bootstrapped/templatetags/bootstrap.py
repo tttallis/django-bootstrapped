@@ -12,6 +12,7 @@ class BootstrapJSNode(template.Node):
 
     def render_all_scripts(self):
         results = [
+            SCRIPT_TAG % (settings.STATIC_URL, 'jquery'),
             SCRIPT_TAG % (settings.STATIC_URL, 'alert'),
             SCRIPT_TAG % (settings.STATIC_URL, 'carousel'),
             SCRIPT_TAG % (settings.STATIC_URL, 'collapse'),
