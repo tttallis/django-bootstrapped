@@ -11,6 +11,7 @@ No files from Twitter's Bootstrap toolkit have been modified and retain their Ap
 
 * Note: This app only works on Django 1.3 and newer.
 
+
 =========
 This fork
 =========
@@ -20,6 +21,8 @@ This fork updates the django-bootstrapped project:
 * Bootstrap v.2.0.2
 
 * base template called "base_bootstrap.html"
+
+* adds the bootstrapform template tag, taken from ...
 
 
 Installation
