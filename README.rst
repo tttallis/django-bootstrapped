@@ -22,7 +22,7 @@ This fork updates the django-bootstrapped project:
 
 * base template called "base_bootstrap.html"
 
-* adds the bootstrapform template tag, taken from ...
+* adds the bootstrapform template tag, taken from https://github.com/bianchimro/django-bootstrap-form
 
 
 Installation
