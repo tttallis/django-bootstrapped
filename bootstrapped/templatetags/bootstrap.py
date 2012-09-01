@@ -40,11 +40,11 @@ class BootstrapJSNode(template.Node):
             return '\n'.join(tags)
 
 @register.simple_tag
-def bootstrap_custom_less(less):
-    output=[
-            '<link rel="stylesheet/less" type="text/css" href="%s%s" media="all">' % (settings.STATIC_URL, less),
-            '<script src="%sjs/less-1.3.0.min.js" type="text/javascript"></script>' % settings.STATIC_URL,
-        ]
+def bootstrap_custom_less(less, responsive=False):
+    output=['<link rel="stylesheet/less" type="text/css" href="%s%s" media="all">' % (settings.STATIC_URL, less)]
+    if responsive == 'responsive':
+        output.append('<link rel="stylesheet/less" type="text/css" href="%sless/responsive.less" media="all">' % settings.STATIC_URL)
+    output.append('<script src="%sjs/less-1.3.0.min.js" type="text/javascript"></script>' % settings.STATIC_URL)
     return '\n'.join(output)
 
 @register.simple_tag
